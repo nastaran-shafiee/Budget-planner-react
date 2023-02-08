@@ -3,7 +3,7 @@
   height: 3.5rem;
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.125rem solid gray;
+  border-bottom: 1px solid gray;
   margin-bottom: -1px;
   padding: 1rem;
   padding-left: 2rem;
