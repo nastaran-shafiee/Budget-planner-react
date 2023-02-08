@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import BudgetCart from "./component/budget-cart/budget-cart";
+import ExpenseCarts from "./component/expense-carts/expense-carts";
 
 function App() {
   return (
@@ -13,8 +14,11 @@ function App() {
         <BudgetCart title="Spent so far:" className="Spent" />
       </div>
       <h3>Expenses</h3>
-      <div className="Expense_cart_container"></div>
+      <div className="Expense_cart_container">
+        <ExpenseCarts />
+      </div>
       <h3>Add Expense</h3>
+
       <div className="Add-container"></div>
     </div>
   );

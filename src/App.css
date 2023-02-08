@@ -42,14 +42,11 @@
 .Expense_cart_container {
   height: 2000px;
   width: 90%;
-
-  background-color: gray;
-  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  border: 0.125rem solid gray;
 }
 .Add-container {
   height: 200px;
   width: 90%;
-
-  background-color: gray;
-  align-self: flex-start;
 }
