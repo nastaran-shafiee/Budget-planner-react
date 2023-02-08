@@ -1,17 +1,15 @@
-import { Children } from "react";
+import React, { Children } from "react";
 // interFace---------------------------------------------------------------------------------------
 interface ChildrenProps {
   className: string;
   title: string;
-  Children: any;
 }
 // budget jsx---------------------------------------------------------------------------------------
-function budgetCart({ className, title, Children }: ChildrenProps) {
+function BudgetCart({ className, title }: ChildrenProps) {
   return (
     <div className={className}>
       <p>{title}</p>
-      <>{Children}</>
     </div>
   );
 }
-export default budgetCart;
+export default BudgetCart;

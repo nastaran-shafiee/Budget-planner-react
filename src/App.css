@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.App {
+  width: 62.5rem;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.budget_cart_container {
+  width: 90%;
+  display: flex;
+  gap: 1.875rem;
+}
+.budget {
+  flex: 1;
+  height: 2.8rem;
+  background-color: rgb(199, 199, 199);
+  border-radius: 0.3125rem;
+  padding: 1rem;
+}
+.remaining {
+  flex: 1;
+  height: 2.8rem;
+  background-color: rgb(144, 206, 154);
+  border-radius: 0.3125rem;
+
+  padding: 0.625rem;
+}
+.Spent {
+  flex: 1;
+  height: 2.8rem;
+  background-color: rgb(139, 212, 202);
+  border-radius: 0.3125rem;
+
+  padding: 0.625rem;
+}
+.Expense_cart_container {
+  height: 2000px;
+  width: 90%;
+
+  background-color: gray;
+  align-self: flex-start;
+}
+.Add-container {
+  height: 200px;
+  width: 90%;
+
+  background-color: gray;
+  align-self: flex-start;
+}
