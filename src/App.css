@@ -2,6 +2,9 @@
   box-sizing: border-box;
   margin: 0;
 }
+body {
+  background-color: rgb(214, 213, 213);
+}
 .App {
   width: 62.5rem;
   height: 90vh;
@@ -10,55 +13,53 @@
   flex-direction: column;
   gap: 1.5rem;
   margin-top: 3rem;
+  background-color: white;
+  padding-top: 1.25rem;
+  align-items: center;
 }
-.budget_cart_container {
-  width: 90%;
-  display: flex;
-  gap: 1.875rem;
-}
+
 .budget {
-  flex: 1;
-  height: 2.8rem;
   background-color: rgb(199, 199, 199);
-  border-radius: 0.3125rem;
-  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 .remaining {
-  flex: 1;
-  height: 2.8rem;
   background-color: rgb(144, 206, 154);
-  border-radius: 0.3125rem;
-
-  padding: 0.625rem;
 }
 .Spent {
-  flex: 1;
-  height: 2.8rem;
   background-color: rgb(139, 212, 202);
-  border-radius: 0.3125rem;
-
-  padding: 0.625rem;
 }
 .Expense_cart_container {
   width: 90%;
+  max-height: 200px;
   display: flex;
   flex-direction: column;
   border: 0.0625rem solid gray;
   border-radius: 0.3rem;
+  overflow-y: scroll;
 }
 .Add-container {
-  height: 150px;
   width: 100%;
-
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+.AddExpense {
+  position: fixed;
+  bottom: 2rem;
+  width: 62.5rem;
+  text-emphasis: none;
+  padding-left: 2rem;
+}
+.AddExpense h3 {
+  margin-bottom: 1.25rem;
+}
 .input-container {
-  height: 100px;
   width: 90%;
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
 }
 .lable {
   width: 90%;
