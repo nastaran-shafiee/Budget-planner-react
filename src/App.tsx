@@ -10,33 +10,65 @@ import AddToCart from "./component/addToCart/addToCart";
 import BudgetCarts from "./component/Budget-carts/BudgetCarts";
 import EditModal from "./component/EditModal/editmodal";
 import DeletModal from "./component/deletModal/deletemodal";
+import styled from "styled-components";
+// style component--------------------------------
+const AppContainer = styled.div`
+  width: 62.5rem;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  background-color: white;
+  padding-top: 1.25rem;
+  align-items: center;
+`;
+const Expense_cart_container = styled.div`
+  width: 90%;
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 0.0625rem solid gray;
+  border-radius: 0.3rem;
+  overflow-y: scroll;
+`;
+const AddExpense = styled.div`
+  position: fixed;
+  bottom: 2rem;
+  width: 62.5rem;
+  text-emphasis: none;
+  padding-left: 2rem;
+`;
+const Add_container = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
 // app function---------------------------------------------------------------
 function App() {
   const { List, setSerchList, searchedList } = useContext(AppContext);
 
-  const inputRef = useRef(null);
-
+  // search list function-------------------------------------------------------------
   const searchList = (event: any) => {
     setSerchList([]);
-
     const searchInput = event.target.value.toLowerCase();
-
-    // check for Add Expense
     if (searchInput.length > 0) {
       List.map((item) => {
-        const loweritem = item.name.toLowerCase();
+        const newItem = item.name.toLowerCase();
 
-        if (loweritem.includes(searchInput)) {
+        if (newItem.includes(searchInput)) {
           setSerchList((prevList: any) => [...prevList, item]);
         }
       });
     }
   };
-
+  // return App function-----------------------------------
   return (
     <>
       <DeletModal />
-      <div className="App">
+      <AppContainer className="App">
         <h2>My Budget Planner</h2>
         <BudgetCarts />
         <h3>Expenses</h3>
@@ -44,17 +76,16 @@ function App() {
           type="search"
           placeholder="type to search"
           className="search-input"
-          ref={inputRef}
           // onChange={searchChanging}
           onChange={searchList}
         />
-        <div className="Expense_cart_container">
+        <Expense_cart_container>
           <ExpenseCarts />
-        </div>
+        </Expense_cart_container>
 
-        <div className="AddExpense">
+        <AddExpense>
           <h3>Add Expense</h3>
-          <div className="Add-container">
+          <Add_container>
             <div className="lable">
               <label htmlFor="">Name</label>
               <label htmlFor="">Cost</label>
@@ -62,9 +93,9 @@ function App() {
             <div className="input-container">
               <AddToCart />
             </div>
-          </div>
-        </div>
-      </div>
+          </Add_container>
+        </AddExpense>
+      </AppContainer>
     </>
   );
 }
