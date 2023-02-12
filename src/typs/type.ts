@@ -63,5 +63,8 @@
     id: any,
     CostDelete: any, 
     setCostDelete :(a:any)=>void,
+    searchedList: any,
+    setSerchList: (a:any) => void,
+    
 
   }

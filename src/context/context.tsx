@@ -22,6 +22,10 @@ export const AppContext = createContext<ContectInterFace>({
   id: " ",
   setCostDelete: () => {},
   CostDelete: " ",
+
+  searchedList: [],
+
+  setSerchList: () => {},
 });
 // function App provider-------------------------------------------------------------------------------
 const AppProvider: FC<JsxChilderen> = ({ children }) => {
@@ -35,6 +39,9 @@ const AppProvider: FC<JsxChilderen> = ({ children }) => {
   const [budgetChange, setBudgetChange] = useState<number>(100);
   const [inputChange, setInputChange] = useState<any>(" ");
   const [id, setId] = useState<any>(" ");
+
+  const [searchedList, setSerchList] = useState<any>([]);
+
   // rediouser-------------------------------------------------------------
   const [yourBudget, dispatchYourBudget] = useReducer<any>(manageBudget, {
     count: budgetChange,
@@ -90,6 +97,8 @@ const AppProvider: FC<JsxChilderen> = ({ children }) => {
         setId,
         CostDelete,
         setCostDelete,
+        searchedList,
+        setSerchList,
       }}
     >
       {children}

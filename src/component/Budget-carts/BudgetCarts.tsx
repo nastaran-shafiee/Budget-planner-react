@@ -15,12 +15,9 @@ const Budget_cart_container = styled.div`
 `;
 // budget carts component----------------------------------------------------------------
 function BudgetCarts() {
-  const { dispatchYourBudget, yourBudget, setShowModal, budgetChange } =
+  const { dispatchYourBudget, yourBudget, setShowModal, budgetChange, List } =
     useContext(AppContext);
 
-  useEffect(() => {
-    console.log("object");
-  }, [budgetChange]);
   // editfunction---------------------------------------------
   const a: any = document.getElementById("modal");
   function Edit() {

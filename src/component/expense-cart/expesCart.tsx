@@ -1,18 +1,20 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import { AppContext } from "../../context/context";
 import { ExpenseCartInterFace } from "../../typs/type";
 
 // style-----------------------------------------------------------------------------------------------
 const Container = styled.div`
   width: 100%;
-  height: 3.5rem;
+  height: 3rem;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid gray;
   margin-bottom: -1px;
   padding: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
   box-sizing: border-box;
+  border: 1px solid gray !important;
 `;
 const Rightcontainer = styled.div`
   display: flex;

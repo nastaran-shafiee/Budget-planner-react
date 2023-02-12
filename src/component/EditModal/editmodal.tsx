@@ -65,15 +65,15 @@ function EditModal() {
     inputChange,
     dispatchYourBudget,
   } = useContext(AppContext);
-  // function close modal--------------------------------
+  // function close modal------------------------------------------------
   function closeModal() {
     setShowModal(false);
   }
-  // function changing modal ------------------------------
+  // function changing modal -------------------------------------------
   function changingInput(e: any) {
     setInputChange(e.target.value);
   }
-  // function submit budget--------------------------------------
+  // function submit budget-----------------------------------------------
   function submitBudget() {
     setShowModal(false);
     dispatchYourBudget({ type: "edit" });
@@ -98,7 +98,7 @@ function EditModal() {
               <Button title="add " onClick={submitBudget} />
             </ModalContainerEdit>
           </ModalbackgroundEdit>,
-          document.getElementById("modal")
+          document.getElementById("modal") as HTMLDivElement
         )}
     </>
   );
